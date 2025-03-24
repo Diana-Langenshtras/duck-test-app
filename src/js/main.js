@@ -23,11 +23,18 @@ function hambHandler(e) {
 const modal = document.querySelector("dialog");
 const modalBox = document.getElementById("modal-box");
 const showModalBtn = document.getElementById("show-modal-btn");
+const showModalBtnMobile = document.getElementById("show-modal-btn-mobile");
 const closeModalBtn = document.getElementById("close-modal-btn");
 
 let isModalOpen = false;
 
 showModalBtn.addEventListener("click", (e) => {
+  modal.showModal();
+  isModalOpen = true;
+  e.stopPropagation();
+});
+
+showModalBtnMobile.addEventListener("click", (e) => {
   modal.showModal();
   isModalOpen = true;
   e.stopPropagation();

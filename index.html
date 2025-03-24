@@ -44,47 +44,7 @@
                   <button>
                     <img src="/src/img/icons/basket.svg" alt="Иконка корзины" />
                   </button>
-                  <dialog class="dialog" >
-                    <div class="dialog__content" id="modal-box">
-                      <button class="dialog__button-close" id="close-modal-btn"><img
-                        src="/src/img/icons/menu-close-icon.svg"
-                        alt="Иконка меню"
-                        id="menu-icon-close"
-                        class="menu-icon"
-                      /></button>
-                      <form class="form" id="form" method="POST">
-                        <label>
-                          <span>Имя<span class="accent-required"> *</span></span>
-                          <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder="Введите ваше имя"
-                            required
-                            autofocus
-                          >
-                        </label>
-                        <label>
-                          <span>Телефон<span class="accent-required"> *</span></span>  
-                          <input
-                            type="text"
-                            name="phone"
-                            id="phone"
-                            placeholder=" +7 000 000 00 00 "
-                            required
-                            autofocus
-                          >
-                        </label>
-                        <button class="dialog__button button button-primary">
-                          Отправить
-                        </button>
-                        </form>
-                        
-                        <span class="dialog__text">
-                          Нажимая кнопку “Отправить”, вы соглашаетесь с <a class="accent">политикой конфиденциальности</a> и <a class="accent">договором оферты</a>
-                        </span>
-                    </div>
-                  </dialog>
+
                   <button class="button button-primary" id="show-modal-btn">
                     Заказать обратный звонок
                   </button>
@@ -111,7 +71,10 @@
             <li><a href="#">Отзывы</a></li>
             <li><a href="#">Контакты</a></li>
             <li>
-              <button class="trigger button button-primary menu-mobile__button">
+              <button
+                id="show-modal-btn-mobile"
+                class="trigger button button-primary menu-mobile__button"
+              >
                 Заказать обратный звонок
               </button>
             </li>
@@ -136,16 +99,8 @@
             </div>
           </div>
 
-          <img
-            class="image-second"
-            src="/src/img/crya.svg"
-            alt="Кря"
-          />
-          <img
-            class="image-main"
-            src="/src/img/duck.png"
-            alt="Утка"
-          />
+          <img class="image-second" src="/src/img/crya.svg" alt="Кря" />
+          <img class="image-main" src="/src/img/duck.png" alt="Утка" />
         </div>
         <ul class="category">
           <li>
@@ -186,7 +141,51 @@
             </a>
           </li>
         </ul>
-        
+        <dialog class="dialog">
+          <div class="dialog__content" id="modal-box">
+            <button class="dialog__button-close" id="close-modal-btn">
+              <img
+                src="/src/img/icons/menu-close-icon.svg"
+                alt="Иконка меню"
+                id="menu-icon-close"
+                class="menu-icon"
+              />
+            </button>
+            <form class="form" id="form" method="POST">
+              <label>
+                <span>Имя<span class="accent-required"> *</span></span>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Введите ваше имя"
+                  required
+                  autofocus
+                />
+              </label>
+              <label>
+                <span>Телефон<span class="accent-required"> *</span></span>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder=" +7 000 000 00 00 "
+                  required
+                  autofocus
+                />
+              </label>
+              <button class="dialog__button button button-primary">
+                Отправить
+              </button>
+            </form>
+
+            <span class="dialog__text">
+              Нажимая кнопку “Отправить”, вы соглашаетесь с
+              <a class="accent">политикой конфиденциальности</a> и
+              <a class="accent">договором оферты</a>
+            </span>
+          </div>
+        </dialog>
       </main>
     </div>
     <script type="module" src="/src/js/main.js"></script>
