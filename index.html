@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/fonts/font.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header content">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar__wrap">
+              <a href="#" class="logo" id="logo">
+                <img
+                  src="/src/img/icons/duck-icon.svg"
+                  alt="Иконка корзины"
+                /><span>Duck</span> <span class="accent">Shop</span></a
+              >
+              <ul class="menu" id="menu">
+                <li><a class="menu__item-active" href="#">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+              <div class="navbar__buttons">
+                <div class="navbar__buttons-container">
+                  <button>
+                    <img src="/src/img/icons/basket.svg" alt="Иконка корзины" />
+                  </button>
+                  <dialog class="dialog" >
+                    <div class="dialog__content" id="modal-box">
+                      <button class="dialog__button-close" id="close-modal-btn"><img
+                        src="/src/img/icons/menu-close-icon.svg"
+                        alt="Иконка меню"
+                        id="menu-icon-close"
+                        class="menu-icon"
+                      /></button>
+                      <form class="form" id="form" method="POST">
+                        <label>
+                          <span>Имя<span class="accent-required"> *</span></span>
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Введите ваше имя"
+                            required
+                            autofocus
+                          >
+                        </label>
+                        <label>
+                          <span>Телефон<span class="accent-required"> *</span></span>  
+                          <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            placeholder=" +7 000 000 00 00 "
+                            required
+                            autofocus
+                          >
+                        </label>
+                        <button class="dialog__button button button-primary">
+                          Отправить
+                        </button>
+                        </form>
+                        
+                        <span class="dialog__text">
+                          Нажимая кнопку “Отправить”, вы соглашаетесь с <a class="accent">политикой конфиденциальности</a> и <a class="accent">договором оферты</a>
+                        </span>
+                    </div>
+                  </dialog>
+                  <button class="button button-primary" id="show-modal-btn">
+                    Заказать обратный звонок
+                  </button>
+                </div>
+                <div class="hamb">
+                  <button class="hamb__field" id="hamb">
+                    <img
+                      src="/src/img/icons/menu-icon.svg"
+                      alt="Иконка меню"
+                      id="menu-icon"
+                      class="menu-icon"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="popup" id="popup">
+          <ul class="menu-mobile menu" id="menu-mobile">
+            <li><a class="menu__item-active" href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li>
+              <button class="trigger button button-primary menu-mobile__button">
+                Заказать обратный звонок
+              </button>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main class="main content">
+        <div class="main__preview">
+          <div class="preview__content">
+            <div class="preview__title">
+              <h1 class="title__text">Много</h1>
+              <h1 class="title-second title__text">Уточек</h1>
+            </div>
+            <div class="preview__subtitle">
+              <span class="subtitle__text"
+                >Маленький друг найдётся для каждого <br />
+                в этом кряквенно жёлтом мире</span
+              >
+              <button class="button preview__button button-secondary">
+                Смотреть уточек
+              </button>
+            </div>
+          </div>
+
+          <img
+            class="image-second"
+            src="/src/img/crya.svg"
+            alt="Кря"
+          />
+          <img
+            class="image-main"
+            src="/src/img/duck.png"
+            alt="Утка"
+          />
+        </div>
+        <ul class="category">
+          <li>
+            <a class="category__item" href="#">
+              <img src="/src/img/icons/arrow.svg" alt="Иконка стрелки" />
+              <span class="item__text">Классические</span>
+            </a>
+          </li>
+          <li>
+            <a class="category__item" href="#">
+              <img src="/src/img/icons/arrow.svg" alt="Иконка стрелки" />
+              <span class="item__text">Уточки панки</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="category__item" href="#">
+              <img src="/src/img/icons/arrow.svg" alt="Иконка стрелки" />
+              <span class="item__text">Супергерои</span>
+            </a>
+          </li>
+          <li>
+            <a class="category__item" href="#">
+              <img src="/src/img/icons/arrow.svg" alt="Иконка стрелки" />
+              <span class="item__text">Милые</span>
+            </a>
+          </li>
+          <li>
+            <a class="category__item" href="#">
+              <img src="/src/img/icons/arrow.svg" alt="Иконка стрелки" />
+              <span class="item__text">Для детей</span>
+            </a>
+          </li>
+          <li>
+            <a class="category__item" href="#">
+              <img src="/src/img/icons/arrow.svg" alt="Иконка стрелки" />
+              <span class="item__text">Взрослым</span>
+            </a>
+          </li>
+        </ul>
+        
+      </main>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
